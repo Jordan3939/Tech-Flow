@@ -1,0 +1,166 @@
+/* Custom CSS styles for landing page - Dark Luxury Tech Theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Reenie+Beanie&family=Caveat:wght@600;700&display=swap');
+
+:root {
+  --primary-blue: #3b82f6;
+  --lightning-orange: #f97316;
+  --bg-dark-deep: #050b18;
+  --bg-dark-card: #0c162d;
+  --bg-dark-card-hover: #111f3f;
+  --border-neon-blue: rgba(59, 130, 246, 0.4);
+  --border-neon-orange: rgba(249, 115, 22, 0.45);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #040915;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+/* Subtle Tech Circuit Grid Background */
+.bg-tech-circuit {
+  background-color: #040915;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.18) 0%, transparent 60%),
+    radial-gradient(circle at 100% 40%, rgba(249, 115, 22, 0.12) 0%, transparent 45%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+}
+
+/* Glowing Neon Card Borders */
+.glow-card-blue {
+  background: #091326;
+  border: 1.5px solid rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 20px -3px rgba(37, 99, 235, 0.25), inset 0 0 15px -3px rgba(37, 99, 235, 0.1);
+}
+
+.glow-card-orange {
+  background: #091326;
+  border: 1.5px solid rgba(249, 115, 22, 0.45);
+  box-shadow: 0 0 20px -3px rgba(249, 115, 22, 0.25), inset 0 0 15px -3px rgba(249, 115, 22, 0.1);
+}
+
+.glow-card-green {
+  background: #091326;
+  border: 1.5px solid rgba(34, 197, 94, 0.4);
+  box-shadow: 0 0 20px -3px rgba(34, 197, 94, 0.25), inset 0 0 15px -3px rgba(34, 197, 94, 0.1);
+}
+
+.glow-card-subtle {
+  background: #0a1224;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+}
+
+.glow-card-subtle:hover {
+  background: #0f1c38;
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 25px -4px rgba(37, 99, 235, 0.35);
+}
+
+/* Custom Sleek Dark Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.8);
+}
+
+/* Custom float animations */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.08);
+  }
+}
+
+.animate-float-1 {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 6s ease-in-out infinite;
+}
+
+/* Ambient Glowing Background Orbs & Gradients */
+.glow-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-orb-blue {
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.28) 0%, rgba(59, 130, 246, 0.05) 70%, transparent 100%);
+}
+
+.glow-orb-orange {
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.25) 0%, rgba(245, 158, 11, 0.05) 70%, transparent 100%);
+}
+
+.glow-orb-purple {
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.22) 0%, rgba(147, 51, 234, 0.05) 70%, transparent 100%);
+}
+
+.glow-orb-cyan {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, rgba(14, 165, 233, 0.05) 70%, transparent 100%);
+}
+
+/* Section Radial Highlights */
+.section-glow-hero {
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(37, 99, 235, 0.22), transparent 70%),
+              radial-gradient(circle at 90% 60%, rgba(249, 115, 22, 0.15), transparent 45%),
+              radial-gradient(circle at 10% 80%, rgba(147, 51, 234, 0.12), transparent 40%);
+}
+
+.section-glow-services {
+  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(37, 99, 235, 0.12), transparent 70%),
+              radial-gradient(circle at 15% 20%, rgba(6, 182, 212, 0.12), transparent 50%),
+              radial-gradient(circle at 85% 80%, rgba(249, 115, 22, 0.1), transparent 50%);
+}
+
+.section-glow-framework {
+  background: radial-gradient(ellipse 90% 50% at 50% 30%, rgba(59, 130, 246, 0.14), transparent 70%),
+              radial-gradient(circle at 20% 90%, rgba(249, 115, 22, 0.12), transparent 45%),
+              radial-gradient(circle at 80% 10%, rgba(168, 85, 247, 0.14), transparent 45%);
+}
+
+.section-glow-about {
+  background: radial-gradient(circle at 20% 40%, rgba(59, 130, 246, 0.18), transparent 50%),
+              radial-gradient(circle at 80% 60%, rgba(249, 115, 22, 0.15), transparent 50%);
+}
+
+.section-glow-testimonials {
+  background: radial-gradient(ellipse 80% 50% at 50% 50%, rgba(37, 99, 235, 0.15), transparent 70%),
+              radial-gradient(circle at 85% 20%, rgba(249, 115, 22, 0.12), transparent 45%),
+              radial-gradient(circle at 10% 85%, rgba(6, 182, 212, 0.12), transparent 45%);
+}
+
+

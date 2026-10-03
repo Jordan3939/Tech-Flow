@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Training Modules — TECH FLOW</title>
+  <meta name="description" content="One-on-One PPC Training, Campaign Strategy & Specialized Modules by Jordan Walk. Private, personalized, and practical vertical education.">
+
+  <!-- Social Sharing Preview Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TECHFLOW">
+  <meta property="og:title" content="Services & Training Modules — TECH FLOW">
+  <meta property="og:description" content="One-on-One PPC Training, Campaign Strategy & Specialized Modules by Jordan Walk. Private, personalized, and practical vertical education.">
+  <meta property="og:image" content="src/images/img.webp">
+  <meta property="og:image:type" content="image/webp">
+  <meta property="og:image:alt" content="Jordan Walk, TechFlow founder and PPC trainer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Services & Training Modules — TECH FLOW">
+  <meta name="twitter:description" content="One-on-One PPC Training, Campaign Strategy & Specialized Modules by Jordan Walk. Private, personalized, and practical vertical education.">
+  <meta name="twitter:image" content="src/images/img.webp">
+  
+  <!-- Google Fonts: Poppins & Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Poppins"', 'sans-serif'],
+            signature: ['"Caveat"', 'cursive'],
+          },
+          colors: {
+            brandBlue: '#2563eb',
+            brandBlueHover: '#1d4ed8',
+            brandOrange: '#f97316',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./src/css/style.css">
+  <style>
+    /* Card active state */
+    .service-card.selected {
+      border-color: rgba(59, 130, 246, 0.9) !important;
+      background: linear-gradient(145deg, #0d1a38 0%, #081125 100%) !important;
+      box-shadow: 0 0 25px -2px rgba(37, 99, 235, 0.4), inset 0 0 15px rgba(37, 99, 235, 0.15);
+    }
+    .service-card.locked {
+      border-color: rgba(249, 115, 22, 0.75) !important;
+      background: linear-gradient(145deg, #181512 0%, #0d1222 100%) !important;
+    }
+    /* Custom Checkbox visual */
+    .custom-check {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .selected .custom-check {
+      background-color: #2563eb;
+      border-color: #3b82f6;
+    }
+    .locked .custom-check {
+      background-color: #ea580c;
+      border-color: #f97316;
+    }
+    /* Category Filter Active */
+    .filter-btn.active {
+      background-color: #2563eb;
+      color: #ffffff;
+      border-color: #3b82f6;
+      box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-[#040915] text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white bg-tech-circuit min-h-screen flex flex-col">
+
+  <!-- Header / Navbar Section -->
+  <header class="w-full bg-[#070e20]/90 backdrop-blur-md border-b border-slate-800/80 sticky top-0 z-50 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2.5 group cursor-pointer focus:outline-none select-none">
+          <svg class="w-6 h-6 text-amber-500 fill-current transform group-hover:scale-105 transition-transform duration-200" viewBox="0 0 24 24">
+            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="flex flex-col">
+            <span class="text-xl sm:text-2xl font-black tracking-tight text-white leading-none">
+              TECH<span class="text-blue-500">FLOW</span>
+            </span>
+            <span class="text-[9px] font-bold tracking-widest text-slate-400 uppercase mt-0.5">
+              TRAINING • CLOAKING • CALLS
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">
+            Home
+          </a>
+          <a href="services.html" class="text-sm font-bold text-blue-400 border-b-2 border-blue-500 pb-0.5 transition-colors">
+            Services & Pricing
+          </a>
+          <a href="index.html#framework" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">
+            Framework
+          </a>
+          <a href="index.html#about" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">
+            About Me
+          </a>
+          <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">
+            Contact
+          </a>
+        </nav>
+
+        <!-- Right Side: Telegram + WhatsApp Buttons -->
+        <div class="hidden md:flex items-center gap-4">
+          <a
+            href="https://t.me/Jordonwalk"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-500 hover:bg-sky-400 text-white text-sm font-semibold shadow-lg shadow-sky-500/30 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2"
+            aria-label="Chat with Jordonwalk on Telegram"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21.9 3.6 18.6 20c-.25 1.16-.9 1.45-1.82.9l-5-3.68-2.41 2.32c-.27.27-.5.5-1.03.5l.37-5.1 9.27-8.37c.4-.36-.09-.56-.62-.2L6.9 13.55l-4.92-1.54c-1.07-.34-1.1-1.07.22-1.58L21.44 3.1c.88-.32 1.65.2 1.46.5Z"/>
+            </svg>
+            <span>Telegram</span>
+          </a>
+
+          <a 
+            id="nav-whatsapp-btn"
+            href="https://wa.me/918950385026?text=Hello%20TechFlow,%20I%20am%20interested%20in%20your%20PPC%20training%20and%20services." 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <div class="flex md:hidden items-center">
+          <button 
+            id="mobile-menu-btn" 
+            type="button" 
+            class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            aria-label="Toggle Navigation"
+          >
+            <svg id="menu-open-icon" class="w-6 h-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-[#070e20] px-4 pt-2 pb-5 space-y-2 shadow-2xl">
+      <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Home</a>
+      <a href="services.html" class="block px-3 py-2 rounded-md text-base font-bold text-blue-400 bg-blue-900/30">Services & Pricing</a>
+      <a href="index.html#framework" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Framework</a>
+      <a href="index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About Me</a>
+      <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Contact</a>
+      <div class="pt-2">
+        <a 
+          href="https://wa.me/918950385026?text=Hello%20TechFlow,%20I%20am%20interested%20in%20your%20PPC%20training%20and%20services." 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="w-full flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-blue-600 text-white font-semibold shadow-lg shadow-blue-600/30"
+        >
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-12 md:py-16 border-b border-slate-800/80 bg-[#060c1c] section-glow-hero overflow-hidden">
+    <div class="glow-orb glow-orb-blue w-96 h-96 -top-20 left-1/4 animate-pulse-glow"></div>
+    <div class="glow-orb glow-orb-orange w-80 h-80 bottom-0 right-10 animate-pulse-glow" style="animation-delay: 2s;"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-4xl mx-auto">
+        
+        <!-- Tagline badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-950/90 border border-blue-500/40 text-blue-400 text-xs sm:text-sm font-semibold tracking-wider uppercase mb-5 shadow-lg shadow-blue-950/50">
+          <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
+          <span>Private • Personalized • Practical</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight uppercase">
+          One-on-One <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-400 to-orange-400">PPC Training & Services</span>
+        </h1>
+        
+        <p class="mt-4 text-base sm:text-lg text-slate-300 font-medium max-w-3xl mx-auto leading-relaxed">
+          Campaign Strategy, Technical Routing, and Specialized Vertical Education. Select individual modules below to build your custom syllabus and compute instant investment pricing.
+        </p>
+
+        <!-- 4-Step Brand Loop Strip -->
+        <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto">
+          <!-- Step 1 -->
+          <div class="glow-card-subtle p-3.5 rounded-xl text-left border border-slate-800/80 group hover:border-blue-500/50 transition-all">
+            <div class="flex items-center gap-2 text-blue-400 font-extrabold text-xs tracking-wider mb-1">
+              <span class="w-5 h-5 rounded-md bg-blue-950 border border-blue-500/30 flex items-center justify-center text-[10px]">01</span>
+              RESEARCH
+            </div>
+            <p class="text-xs text-slate-400 font-medium">Intent & market analysis</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="glow-card-subtle p-3.5 rounded-xl text-left border border-slate-800/80 group hover:border-sky-500/50 transition-all">
+            <div class="flex items-center gap-2 text-sky-400 font-extrabold text-xs tracking-wider mb-1">
+              <span class="w-5 h-5 rounded-md bg-sky-950 border border-sky-500/30 flex items-center justify-center text-[10px]">02</span>
+              BUILD
+            </div>
+            <p class="text-xs text-slate-400 font-medium">Structure & high-converting assets</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glow-card-subtle p-3.5 rounded-xl text-left border border-slate-800/80 group hover:border-orange-500/50 transition-all">
+            <div class="flex items-center gap-2 text-orange-400 font-extrabold text-xs tracking-wider mb-1">
+              <span class="w-5 h-5 rounded-md bg-orange-950 border border-orange-500/30 flex items-center justify-center text-[10px]">03</span>
+              MEASURE
+            </div>
+            <p class="text-xs text-slate-400 font-medium">Tracking, telemetry & lead quality</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="glow-card-subtle p-3.5 rounded-xl text-left border border-slate-800/80 group hover:border-emerald-500/50 transition-all">
+            <div class="flex items-center gap-2 text-emerald-400 font-extrabold text-xs tracking-wider mb-1">
+              <span class="w-5 h-5 rounded-md bg-emerald-950 border border-emerald-500/30 flex items-center justify-center text-[10px]">04</span>
+              OPTIMIZE
+            </div>
+            <p class="text-xs text-slate-400 font-medium">Data-driven performance & scale</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout (Services Catalog + Sticky Investment Summary) -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 flex-1 w-full">
+    
+    <!-- Filter Bar & Search Controls -->
+    <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-8 pb-6 border-b border-slate-800/80">
+      
+      <!-- Category Tabs -->
+      <div class="flex flex-wrap items-center gap-2">
+        <button type="button" data-filter="all" class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-slate-700 bg-slate-800/80 text-slate-200 hover:text-white transition-all">
+          All Programs (10)
+        </button>
+        <button type="button" data-filter="foundation" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-slate-700 bg-slate-800/80 text-slate-200 hover:text-white transition-all">
+          Foundation (01)
+        </button>
+        <button type="button" data-filter="specialized" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-slate-700 bg-slate-800/80 text-slate-200 hover:text-white transition-all">
+          Specialized (02–03)
+        </button>
+        <button type="button" data-filter="call-verticals" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-slate-700 bg-slate-800/80 text-slate-200 hover:text-white transition-all">
+          Call Verticals (04–09)
+        </button>
+        <button type="button" data-filter="technical" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-slate-700 bg-slate-800/80 text-slate-200 hover:text-white transition-all">
+          Technical / Routing (10)
+        </button>
+      </div>
+
+      <!-- Quick Action: Clear / Select All -->
+      <div class="flex items-center gap-3">
+        <button id="btn-select-all" class="text-xs font-semibold text-blue-400 hover:text-blue-300 underline underline-offset-4">
+          Select All
+        </button>
+        <span class="text-slate-700">|</span>
+        <button id="btn-reset" class="text-xs font-semibold text-slate-400 hover:text-red-400 transition-colors">
+          Reset Selection
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Layout Columns: 2/3 Services List, 1/3 Sticky Calculator Summary -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- LEFT: Services Catalog (8 Cols) -->
+      <div class="lg:col-span-8 space-y-10">
+
+        <!-- GROUP 1: Foundation Track -->
+        <section data-category-group="foundation" class="space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="h-6 w-1.5 bg-blue-500 rounded-full"></span>
+            <h2 class="text-lg sm:text-xl font-black text-white tracking-wide uppercase">
+              01 • Foundation Track
+            </h2>
+            <span class="text-xs px-2.5 py-0.5 rounded-full bg-blue-950 text-blue-400 font-semibold border border-blue-500/30">
+              Core Framework
+            </span>
+          </div>
+
+          <!-- Card 01 -->
+          <div 
+            id="card-basic-advanced-ppc"
+            data-service-id="basic-advanced-ppc"
+            data-category="foundation"
+            class="service-card glow-card-subtle rounded-2xl p-5 sm:p-6 border border-slate-800 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer relative"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex items-start gap-3.5">
+                <div class="custom-check w-6 h-6 rounded-lg border-2 border-slate-600 flex items-center justify-center mt-0.5 text-white flex-shrink-0">
+                  <svg class="w-4 h-4 check-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-1">
+                    <span class="text-xs font-black text-blue-400 uppercase tracking-widest bg-blue-950/80 px-2 py-0.5 rounded border border-blue-500/30">
+                      Module 01
+                    </span>
+                    <span id="badge-dependency-info" class="hidden text-[11px] font-bold text-orange-400 bg-orange-950/80 px-2 py-0.5 rounded border border-orange-500/30">
+                      Required by Selected Vertical
+                    </span>
+                  </div>
+                  <h3 class="text-lg sm:text-xl font-black text-white tracking-tight">
+                    Basic → Advanced PPC
+                  </h3>
+                  <p class="text-xs sm:text-sm text-slate-400 font-normal mt-0.5">
+                    End-to-end foundation: from account architecture to bid algorithms, conversion telemetry, and compliance.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Price -->
+              <div class="text-right flex-shrink-0">
+                <div class="text-2xl sm:text-3xl font-black text-white tracking-tight">$200</div>
+                <span class="text-[10px] text-slate-400 font-medium uppercase tracking-wider block">Flat Investment</span>
+              </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="mt-5 pt-4 border-t border-slate-800/80">
+              <h4 class="text-xs font-bold text-slate-300 uppercase tracking-wider mb-2.5">Key Curriculum & Features:</h4>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500 font-bold">•</span> Campaign creation & structuring
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500 font-bold">•</span> Ad group setup & hierarchy
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500 font-bold">•</span> Ads policy & compliance awareness
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500 font-bold">•</span> Assets & ad messaging copy
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500 font-bold">•</span> Advanced device & geo targeting
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500 font-bold">•</span> Keyword match types & syntax
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500 font-bold">•</span> Keyword mining & negative sculpting
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500 font-bold">•</span> Conversion tracking & tags
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500 font-bold">•</span> Display & contextual targeting
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500 font-bold">•</span> Bid strategy & smart bidding
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500 font-bold">•</span> Search-term intent analysis
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500 font-bold">•</span> Ad testing & optimization framework
+                </div>
+                <div class="flex items-center gap-2 sm:col-span-2">
+                  <span class="text-blue-500 font-bold">•</span> Budget scaling and real-time performance review
+                </div>
+              </div>
+            </div>
+
+            <!-- Learning Outcome Highlight Box -->
+            <div class="mt-4 p-3 rounded-xl bg-blue-950/40 border border-blue-500/20 text-xs text-blue-200">
+              <strong class="text-blue-300 font-semibold">Learning Outcome:</strong> By the end of this foundation track, learners understand not only where settings live, but how every campaign decision connects directly to intent, conversion goals, performance data, and lead quality.
+            </div>
+          </div>
+        </section>
+
+        <!-- GROUP 2: Specialized Modules -->
+        <section data-category-group="specialized" class="space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="h-6 w-1.5 bg-indigo-500 rounded-full"></span>
+              <h2 class="text-lg sm:text-xl font-black text-white tracking-wide uppercase">
+                02 • Specialized Modules
+              </h2>
+            </div>
+          </div>
+
+          <!-- Section Disclaimer -->
+          <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400">
+            <svg class="w-4 h-4 text-slate-400 inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Specialized training is framed around legitimate campaign strategy, accurate representation, tracking, lead quality, and compliance-aware implementation.
+          </div>
+
+          <div class="grid grid-cols-1 gap-4">
+            
+            <!-- Card 02: iOS Push • SMS • MMS -->
+            <div 
+              id="card-ios-push-sms-mms"
+              data-service-id="ios-push-sms-mms"
+              data-category="specialized"
+              class="service-card glow-card-subtle rounded-2xl p-5 sm:p-6 border border-slate-800 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer relative"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex items-start gap-3.5">
+                  <div class="custom-check w-6 h-6 rounded-lg border-2 border-slate-600 flex items-center justify-center mt-0.5 text-white flex-shrink-0">
+                    <svg class="w-4 h-4 check-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="text-xs font-black text-indigo-400 uppercase tracking-widest bg-indigo-950/80 px-2 py-0.5 rounded border border-indigo-500/30">
+                      Module 02
+                    </span>
+                    <h3 class="text-lg sm:text-xl font-black text-white tracking-tight mt-1">
+                      iOS Push • SMS • MMS
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-400 font-normal mt-0.5">
+                      Direct mobile push sources, carrier-grade data segmentation, and delivery routing concepts.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="text-right flex-shrink-0">
+                  <div class="text-2xl sm:text-3xl font-black text-white tracking-tight">$200</div>
+                  <span class="text-[10px] text-emerald-400 font-semibold block">Standalone</span>
+                </div>
+              </div>
+
+              <!-- Features -->
+              <div class="mt-4 pt-4 border-t border-slate-800/80">
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-slate-300">
+                  <div><span class="text-indigo-500 font-bold">•</span> Push setup & sources</div>
+                  <div><span class="text-indigo-500 font-bold">•</span> Data organization</div>
+                  <div><span class="text-indigo-500 font-bold">•</span> Routing methods</div>
+                  <div><span class="text-indigo-500 font-bold">•</span> Audience segmentation</div>
+                  <div><span class="text-indigo-500 font-bold">•</span> Delivery concepts</div>
+                  <div><span class="text-indigo-500 font-bold">•</span> Tracking & reporting</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 03: iOS Popup • BSOD -->
+            <div 
+              id="card-ios-popup-bsod"
+              data-service-id="ios-popup-bsod"
+              data-category="specialized"
+              class="service-card glow-card-subtle rounded-2xl p-5 sm:p-6 border border-slate-800 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer relative"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex items-start gap-3.5">
+                  <div class="custom-check w-6 h-6 rounded-lg border-2 border-slate-600 flex items-center justify-center mt-0.5 text-white flex-shrink-0">
+                    <svg class="w-4 h-4 check-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="flex flex-wrap items-center gap-2 mb-1">
+                      <span class="text-xs font-black text-indigo-400 uppercase tracking-widest bg-indigo-950/80 px-2 py-0.5 rounded border border-indigo-500/30">
+                        Module 03
+                      </span>
+                      <span class="text-[11px] font-bold text-amber-400 bg-amber-950/80 px-2 py-0.5 rounded border border-amber-500/30">
+                        + Cloaking Fee (Quote)
+                      </span>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-black text-white tracking-tight">
+                      iOS Popup • BSOD
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-400 font-normal mt-0.5">
+                      Safe-page architecture, traffic quality auditing, and policy-aware routing.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="text-right flex-shrink-0">
+                  <div class="text-2xl sm:text-3xl font-black text-white tracking-tight">$400</div>
+                  <span class="text-[10px] text-amber-400 font-semibold block">+ Cloaking Fee</span>
+                </div>
+              </div>
+
+              <!-- Features -->
+              <div class="mt-4 pt-4 border-t border-slate-800/80">
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-slate-300">
+                  <div><span class="text-indigo-500 font-bold">•</span> Safe-page / Money-page URLs</div>
+                  <div><span class="text-indigo-500 font-bold">•</span> Landing-page consistency</div>
+                  <div><span class="text-indigo-500 font-bold">•</span> Quality & trust signals</div>
+                  <div><span class="text-indigo-500 font-bold">•</span> Traffic troubleshooting</div>
+                  <div><span class="text-indigo-500 font-bold">•</span> Policy routing concepts</div>
+                  <div><span class="text-indigo-500 font-bold">•</span> Flagging-risk awareness</div>
+                </div>
+              </div>
+
+              <!-- Notice about Cloaking Fee Quote -->
+              <div class="mt-3 p-2.5 rounded-lg bg-amber-950/30 border border-amber-500/20 text-xs text-amber-300 flex items-center justify-between">
+                <span>⚠️ <strong>Note:</strong> Cloaking Fee is variable based on stream load. Base module is $400.</span>
+                <span class="text-[11px] font-bold underline">Contact for Quote</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- GROUP 3: Tech • Support • Call Verticals -->
+        <section data-category-group="call-verticals" class="space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="h-6 w-1.5 bg-orange-500 rounded-full"></span>
+              <h2 class="text-lg sm:text-xl font-black text-white tracking-wide uppercase">
+                03 • Tech • Support • Call Verticals
+              </h2>
+            </div>
+            <span class="text-xs px-2.5 py-0.5 rounded-full bg-orange-950 text-orange-400 font-semibold border border-orange-500/30">
+              Requires 01 ($200 PPC Foundation)
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <!-- Card 04: Crypto Calls -->
+            <div 
+              id="card-crypto-calls"
+              data-service-id="crypto-calls"
+              data-category="call-verticals"
+              class="service-card glow-card-subtle rounded-2xl p-5 border border-slate-800 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer relative"
+            >
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-start gap-3">
+                  <div class="custom-check w-5 h-5 rounded-md border-2 border-slate-600 flex items-center justify-center mt-0.5 text-white flex-shrink-0">
+                    <svg class="w-3.5 h-3.5 check-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="text-[11px] font-black text-orange-400 uppercase tracking-widest bg-orange-950/80 px-2 py-0.5 rounded border border-orange-500/30">
+                      Module 04
+                    </span>
+                    <h3 class="text-base sm:text-lg font-black text-white tracking-tight mt-1">
+                      Crypto Calls
+                    </h3>
+                  </div>
+                </div>
+                <div class="text-right flex-shrink-0">
+                  <div class="text-xl font-black text-white">$300</div>
+                  <span class="text-[10px] text-orange-400 font-bold block">+ PPC Fee</span>
+                </div>
+              </div>
+
+              <div class="mt-3 pt-3 border-t border-slate-800/80 text-xs text-slate-300 space-y-1">
+                <div><span class="text-orange-500 font-bold">•</span> Keyword & intent research</div>
+                <div><span class="text-orange-500 font-bold">•</span> Offer-to-page alignment</div>
+                <div><span class="text-orange-500 font-bold">•</span> Call-focused conversion tracking</div>
+                <div><span class="text-orange-500 font-bold">•</span> Eligibility & policy awareness</div>
+              </div>
+            </div>
+
+            <!-- Card 05: Banking Calls -->
+            <div 
+              id="card-banking-calls"
+              data-service-id="banking-calls"
+              data-category="call-verticals"
+              class="service-card glow-card-subtle rounded-2xl p-5 border border-slate-800 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer relative"
+            >
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-start gap-3">
+                  <div class="custom-check w-5 h-5 rounded-md border-2 border-slate-600 flex items-center justify-center mt-0.5 text-white flex-shrink-0">
+                    <svg class="w-3.5 h-3.5 check-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="text-[11px] font-black text-orange-400 uppercase tracking-widest bg-orange-950/80 px-2 py-0.5 rounded border border-orange-500/30">
+                      Module 05
+                    </span>
+                    <h3 class="text-base sm:text-lg font-black text-white tracking-tight mt-1">
+                      Banking Calls
+                    </h3>
+                  </div>
+                </div>
+                <div class="text-right flex-shrink-0">
+                  <div class="text-xl font-black text-white">$300</div>
+                  <span class="text-[10px] text-orange-400 font-bold block">+ PPC Fee</span>
+                </div>
+              </div>
+
+              <div class="mt-3 pt-3 border-t border-slate-800/80 text-xs text-slate-300 space-y-1">
+                <div><span class="text-orange-500 font-bold">•</span> High-intent keyword clustering</div>
+                <div><span class="text-orange-500 font-bold">•</span> Geographic radius targeting</div>
+                <div><span class="text-orange-500 font-bold">•</span> Call tracking concepts</div>
+                <div><span class="text-orange-500 font-bold">•</span> Lead-quality & validation checks</div>
+              </div>
+            </div>
+
+            <!-- Card 06: MS Office • Amazon • Uber -->
+            <div 
+              id="card-msoffice-amazon-uber"
+              data-service-id="msoffice-amazon-uber"
+              data-category="call-verticals"
+              class="service-card glow-card-subtle rounded-2xl p-5 border border-slate-800 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer relative"
+            >
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-start gap-3">
+                  <div class="custom-check w-5 h-5 rounded-md border-2 border-slate-600 flex items-center justify-center mt-0.5 text-white flex-shrink-0">
+                    <svg class="w-3.5 h-3.5 check-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="text-[11px] font-black text-orange-400 uppercase tracking-widest bg-orange-950/80 px-2 py-0.5 rounded border border-orange-500/30">
+                      Module 06
+                    </span>
+                    <h3 class="text-base sm:text-lg font-black text-white tracking-tight mt-1">
+                      MS Office • Amazon • Uber
+                    </h3>
+                  </div>
+                </div>
+                <div class="text-right flex-shrink-0">
+                  <div class="text-xl font-black text-white">$300</div>
+                  <span class="text-[10px] text-orange-400 font-bold block">+ PPC Fee</span>
+                </div>
+              </div>
+
+              <div class="mt-3 pt-3 border-t border-slate-800/80 text-xs text-slate-300 space-y-1">
+                <div><span class="text-orange-500 font-bold">•</span> Keywords & intent mapping</div>
+                <div><span class="text-orange-500 font-bold">•</span> Campaign segmentation</div>
+                <div><span class="text-orange-500 font-bold">•</span> Landing-page relevance</div>
+                <div><span class="text-orange-500 font-bold">•</span> Call / form tracking workflow</div>
+              </div>
+            </div>
+
+            <!-- Card 07: Printer • Antivirus -->
+            <div 
+              id="card-printer-antivirus"
+              data-service-id="printer-antivirus"
+              data-category="call-verticals"
+              class="service-card glow-card-subtle rounded-2xl p-5 border border-slate-800 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer relative"
+            >
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-start gap-3">
+                  <div class="custom-check w-5 h-5 rounded-md border-2 border-slate-600 flex items-center justify-center mt-0.5 text-white flex-shrink-0">
+                    <svg class="w-3.5 h-3.5 check-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="text-[11px] font-black text-orange-400 uppercase tracking-widest bg-orange-950/80 px-2 py-0.5 rounded border border-orange-500/30">
+                      Module 07
+                    </span>
+                    <h3 class="text-base sm:text-lg font-black text-white tracking-tight mt-1">
+                      Printer • Antivirus
+                    </h3>
+                  </div>
+                </div>
+                <div class="text-right flex-shrink-0">
+                  <div class="text-xl font-black text-white">$300</div>
+                  <span class="text-[10px] text-orange-400 font-bold block">+ PPC Fee</span>
+                </div>
+              </div>
+
+              <!-- Sub Brands -->
+              <div class="mt-2.5 flex flex-wrap gap-1">
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300">HP</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300">Canon</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300">Epson</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300">Norton</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300">McAfee</span>
+              </div>
+
+              <div class="mt-3 pt-3 border-t border-slate-800/80 text-xs text-slate-300 space-y-1">
+                <div><span class="text-orange-500 font-bold">•</span> Keyword clustering</div>
+                <div><span class="text-orange-500 font-bold">•</span> Call-intent structure</div>
+                <div><span class="text-orange-500 font-bold">•</span> Landing-page messaging</div>
+                <div><span class="text-orange-500 font-bold">•</span> Tracking & optimization</div>
+              </div>
+            </div>
+
+            <!-- Card 08: Loan • Insurance Calls -->
+            <div 
+              id="card-loan-insurance-calls"
+              data-service-id="loan-insurance-calls"
+              data-category="call-verticals"
+              class="service-card glow-card-subtle rounded-2xl p-5 border border-slate-800 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer relative"
+            >
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-start gap-3">
+                  <div class="custom-check w-5 h-5 rounded-md border-2 border-slate-600 flex items-center justify-center mt-0.5 text-white flex-shrink-0">
+                    <svg class="w-3.5 h-3.5 check-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="text-[11px] font-black text-orange-400 uppercase tracking-widest bg-orange-950/80 px-2 py-0.5 rounded border border-orange-500/30">
+                      Module 08
+                    </span>
+                    <h3 class="text-base sm:text-lg font-black text-white tracking-tight mt-1">
+                      Loan • Insurance Calls
+                    </h3>
+                  </div>
+                </div>
+                <div class="text-right flex-shrink-0">
+                  <div class="text-xl font-black text-white">$300</div>
+                  <span class="text-[10px] text-orange-400 font-bold block">+ PPC Fee</span>
+                </div>
+              </div>
+
+              <div class="mt-3 pt-3 border-t border-slate-800/80 text-xs text-slate-300 space-y-1">
+                <div><span class="text-orange-500 font-bold">•</span> Payday / insurance concepts</div>
+                <div><span class="text-orange-500 font-bold">•</span> Keyword clustering & intent</div>
+                <div><span class="text-orange-500 font-bold">•</span> Landing-page relevance</div>
+                <div><span class="text-orange-500 font-bold">•</span> Policy-aware messaging</div>
+              </div>
+            </div>
+
+            <!-- Card 09: TV Activation -->
+            <div 
+              id="card-tv-activation"
+              data-service-id="tv-activation"
+              data-category="call-verticals"
+              class="service-card glow-card-subtle rounded-2xl p-5 border border-slate-800 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer relative"
+            >
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-start gap-3">
+                  <div class="custom-check w-5 h-5 rounded-md border-2 border-slate-600 flex items-center justify-center mt-0.5 text-white flex-shrink-0">
+                    <svg class="w-3.5 h-3.5 check-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="text-[11px] font-black text-orange-400 uppercase tracking-widest bg-orange-950/80 px-2 py-0.5 rounded border border-orange-500/30">
+                      Module 09
+                    </span>
+                    <h3 class="text-base sm:text-lg font-black text-white tracking-tight mt-1">
+                      TV Activation
+                    </h3>
+                  </div>
+                </div>
+                <div class="text-right flex-shrink-0">
+                  <div class="text-xl font-black text-white">$300</div>
+                  <span class="text-[10px] text-orange-400 font-bold block">+ PPC Fee</span>
+                </div>
+              </div>
+
+              <!-- Sub Brands -->
+              <div class="mt-2.5 flex flex-wrap gap-1">
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300">YouTube</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300">Roku</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300">Paramount</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300">Peacock</span>
+              </div>
+
+              <div class="mt-3 pt-3 border-t border-slate-800/80 text-xs text-slate-300 space-y-1">
+                <div><span class="text-orange-500 font-bold">•</span> Keyword clustering</div>
+                <div><span class="text-orange-500 font-bold">•</span> Offer / page alignment</div>
+                <div><span class="text-orange-500 font-bold">•</span> Call / form tracking</div>
+                <div><span class="text-orange-500 font-bold">•</span> Performance review</div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- GROUP 4: Technical Module -->
+        <section data-category-group="technical" class="space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="h-6 w-1.5 bg-cyan-500 rounded-full"></span>
+            <h2 class="text-lg sm:text-xl font-black text-white tracking-wide uppercase">
+              04 • Technical Routing
+            </h2>
+            <span class="text-xs px-2.5 py-0.5 rounded-full bg-cyan-950 text-cyan-400 font-semibold border border-cyan-500/30">
+              Standalone Architecture
+            </span>
+          </div>
+
+          <!-- Card 10: Cloaking / Technical Routing -->
+          <div 
+            id="card-cloaking-technical-routing"
+            data-service-id="cloaking-technical-routing"
+            data-category="technical"
+            class="service-card glow-card-subtle rounded-2xl p-5 sm:p-6 border border-slate-800 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer relative"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex items-start gap-3.5">
+                <div class="custom-check w-6 h-6 rounded-lg border-2 border-slate-600 flex items-center justify-center mt-0.5 text-white flex-shrink-0">
+                  <svg class="w-4 h-4 check-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="text-xs font-black text-cyan-400 uppercase tracking-widest bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-500/30">
+                    Module 10
+                  </span>
+                  <h3 class="text-lg sm:text-xl font-black text-white tracking-tight mt-1">
+                    Cloaking / Technical Routing
+                  </h3>
+                  <p class="text-xs sm:text-sm text-slate-400 font-normal mt-0.5">
+                    Multi-platform server integrations, stream routing, and advanced filtering engines.
+                  </p>
+                </div>
+              </div>
+
+              <div class="text-right flex-shrink-0">
+                <div class="text-2xl sm:text-3xl font-black text-white tracking-tight">$300</div>
+                <span class="text-[10px] text-emerald-400 font-semibold block">Flat Fee</span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="mt-4 pt-4 border-t border-slate-800/80">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
+                <div><span class="text-cyan-400 font-bold">•</span> HTML, PHP, Java & WordPress integration</div>
+                <div><span class="text-cyan-400 font-bold">•</span> Reverse & forward integration</div>
+                <div><span class="text-cyan-400 font-bold">•</span> Adding streams / traffic paths</div>
+                <div><span class="text-cyan-400 font-bold">•</span> Filter settings (Countries & devices)</div>
+                <div><span class="text-cyan-400 font-bold">•</span> IP filtering for security/access control</div>
+                <div><span class="text-cyan-400 font-bold">•</span> URL rules, logging & troubleshooting</div>
+              </div>
+            </div>
+
+            <!-- Policy Aware Implementation Note -->
+            <div class="mt-4 p-3 rounded-xl bg-cyan-950/30 border border-cyan-500/20 text-xs text-cyan-200">
+              <strong class="text-cyan-300 font-semibold">Important Policy Note:</strong> Technical routing should not be used to mislead users, hide prohibited content, or evade ad review. Tech Flow positions this module around legitimate routing, personalization, security, analytics, and controlled access.
+            </div>
+
+            <!-- Measurement Layer Tags -->
+            <div class="mt-3 pt-3 border-t border-slate-800/60">
+              <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Measurement Layer Included:</div>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-slate-700">Click tracking</span>
+                <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-slate-700">Conversion events</span>
+                <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-slate-700">Call tracking</span>
+                <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-slate-700">Attribution basics</span>
+                <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-slate-700">Lead-quality review</span>
+                <span class="text-[11px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 border border-slate-700">Performance reporting</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+      <!-- RIGHT: Sticky Cost Summary & Investment Calculator (4 Cols) -->
+      <div class="lg:col-span-4 sticky top-20">
+        
+        <div class="glow-card-blue rounded-3xl p-6 border border-blue-500/40 backdrop-blur-xl bg-[#091326]/95 shadow-2xl relative overflow-hidden">
+          <div class="absolute -right-10 -top-10 w-36 h-36 bg-blue-600/10 rounded-full blur-2xl"></div>
+
+          <!-- Header -->
+          <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+            <div>
+              <span class="text-[10px] font-black text-blue-400 uppercase tracking-widest block">06 / Pricing</span>
+              <h3 class="text-xl font-black text-white">Investment Summary</h3>
+            </div>
+            <div id="selected-count-badge" class="px-3 py-1 rounded-full bg-blue-900/60 border border-blue-500/40 text-blue-300 text-xs font-extrabold">
+              0 Modules
+            </div>
+          </div>
+
+          <!-- Investment Logic Note from Section 06 -->
+          <div class="my-4 p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-400 leading-relaxed">
+            <span class="text-slate-300 font-semibold">Investment Logic:</span> Start with the PPC foundation when you need the core campaign framework. Add specialized modules when you need a focused vertical or technical skill set.
+          </div>
+
+          <!-- Dynamic Cart Items Container -->
+          <div id="cart-items-list" class="space-y-2.5 max-h-64 overflow-y-auto pr-1 custom-scrollbar py-2">
+            <!-- Empty state placeholder -->
+            <div id="cart-empty-state" class="text-center py-6 text-slate-500 text-xs">
+              <svg class="w-8 h-8 mx-auto mb-2 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              No modules selected yet.<br>Click any card to add it to your syllabus.
+            </div>
+          </div>
+
+          <!-- TBD Cloaking Fee Notice (if Module 03 selected) -->
+          <div id="cart-cloaking-alert" class="hidden my-2 p-2.5 rounded-lg bg-amber-950/50 border border-amber-500/30 text-[11px] text-amber-300">
+            ⚠️ <strong>Notice:</strong> Cloaking Fee for Module 03 will be quoted separately based on stream scale.
+          </div>
+
+          <!-- Total Breakdown -->
+          <div class="pt-4 mt-2 border-t border-slate-800/80 space-y-2 text-xs">
+            <div class="flex items-center justify-between text-slate-400">
+              <span>Subtotal Modules:</span>
+              <span id="summary-subtotal" class="font-bold text-slate-200">$0</span>
+            </div>
+            
+            <div id="summary-dependency-row" class="hidden flex items-center justify-between text-orange-400">
+              <span class="flex items-center gap-1">
+                <span>+ PPC Foundation (01)</span>
+                <span class="text-[9px] bg-orange-950 px-1.5 py-0.5 rounded border border-orange-500/30">Auto-Linked</span>
+              </span>
+              <span class="font-bold">$200</span>
+            </div>
+
+            <div class="flex items-center justify-between text-base sm:text-lg font-black text-white pt-2 border-t border-slate-800">
+              <span>Total Investment:</span>
+              <span id="summary-total" class="text-2xl text-blue-400 font-extrabold">$0</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="mt-6 space-y-2.5">
+            <a 
+              id="btn-whatsapp-checkout"
+              href="https://wa.me/918950385026?text=Hello%20TechFlow,%20I%20would%20like%20to%20enroll%20in%20training." 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-200 focus:outline-none"
+            >
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+              <span>Enroll / Inquire on WhatsApp</span>
+            </a>
+
+            <p class="text-[10px] text-center text-slate-500">
+              Syllabus is pre-formatted for WhatsApp. Direct consultation with Jordan Walk.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Founder Spotlight & Quote Block -->
+    <section class="mt-16 pt-12 border-t border-slate-800/80">
+      <div class="glow-card-subtle rounded-3xl p-6 sm:p-10 border border-slate-800 relative overflow-hidden bg-gradient-to-r from-[#060e20] to-[#0a1530]">
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          
+          <!-- Founder Info -->
+          <div class="md:col-span-5 flex items-center gap-5">
+            <div class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-blue-500/40 shadow-lg shadow-blue-600/25 flex-shrink-0 bg-[#080d1f]">
+              <img 
+                src="src/images/img.webp" 
+                alt="Jordan Walk PPC Trainer" 
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div>
+              <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Personal Trainer & Founder</span>
+              <h3 class="text-xl sm:text-2xl font-black text-white">Jordan Walk</h3>
+              <p class="text-xs text-slate-400 mt-1">14+ Years Industry Experience • TechFlow Founder</p>
+              <div class="mt-2 inline-flex items-center gap-1.5 text-xs text-emerald-400 font-semibold">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Active 1-on-1 Mentorship</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Founder Philosophy Quote -->
+          <div class="md:col-span-7 border-t md:border-t-0 md:border-l border-slate-800 pt-6 md:pt-0 md:pl-8">
+            <div class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-2">Training Philosophy</div>
+            <blockquote class="text-sm sm:text-base font-medium text-slate-200 italic leading-relaxed">
+              "THE BEST CAMPAIGN IS NOT THE MOST COMPLICATED SETUP. IT IS THE ONE WHERE OBJECTIVE, AUDIENCE, MESSAGE, DESTINATION, TRACKING AND OPTIMIZATION WORK TOGETHER."
+            </blockquote>
+            <div class="mt-3 font-signature text-xl text-blue-400">— Jordan Walk</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Legal & Disclaimer Verbatim Section (Section 2 of Spec) -->
+  <section class="w-full bg-[#03060f] border-t border-slate-800/80 py-8 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto text-center">
+      <h4 class="text-xs font-extrabold uppercase tracking-widest text-slate-500 mb-2">Legal Notice & Policy Compliance</h4>
+      <p class="text-xs text-slate-400 max-w-4xl mx-auto leading-relaxed">
+        Training content and pricing are subject to change. Platform policies, certifications, privacy requirements and applicable laws may change; learners are responsible for verifying current requirements before launching campaigns.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="contact" class="w-full bg-[#02040a] border-t border-slate-900 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-400">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 group cursor-pointer focus:outline-none select-none">
+          <svg class="w-5 h-5 text-amber-500 fill-current" viewBox="0 0 24 24">
+            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="text-base font-black tracking-tight text-white">
+            TECH<span class="text-blue-500">FLOW</span>
+          </span>
+        </a>
+
+        <!-- Footer Links -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-slate-300 font-medium text-xs">
+          <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a>
+          <span class="text-slate-700">|</span>
+          <a href="services.html" class="text-blue-400 font-bold transition-colors">Services & Pricing</a>
+          <span class="text-slate-700">|</span>
+          <a href="privacy.html" class="hover:text-blue-400 transition-colors">Privacy Policy</a>
+          <span class="text-slate-700">|</span>
+          <a href="disclaimer.html" class="hover:text-blue-400 transition-colors">Disclaimer</a>
+          <span class="text-slate-700">|</span>
+          <a href="terms.html" class="hover:text-blue-400 transition-colors">Terms & Conditions</a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-slate-500 text-[11px]">
+          © 2026 TechFlow. All Rights Reserved. • Jordan Walk
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a 
+    href="https://wa.me/918950385026?text=Hello%20and%20welcome%20to%20TechFlow!%20How%20can%20we%20help%20you%20today%3F"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#1ebe5d] text-white shadow-lg shadow-green-900/30 flex items-center justify-center transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-[#02040a]"
+    aria-label="Chat with us on WhatsApp"
+    title="Chat with us on WhatsApp"
+  >
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+  </a>
+
+  <!-- Interactive JavaScript Engine (Catalog Data Model, State, Dependency Engine & Cart) -->
+  <script>
+    // 1. Data Model based on SERVICES_PAGE_SPEC.md
+    const CATALOG = [
+      {
+        id: "basic-advanced-ppc",
+        code: "01",
+        title: "Basic → Advanced PPC",
+        category: "foundation",
+        basePrice: 200,
+        feeType: "none",
+        isFoundation: true,
+        shortDesc: "Comprehensive PPC campaign strategy, setup & conversion telemetry"
+      },
+      {
+        id: "ios-push-sms-mms",
+        code: "02",
+        title: "iOS Push • SMS • MMS",
+        category: "specialized",
+        basePrice: 200,
+        feeType: "none",
+        shortDesc: "Push setup, carrier routing & data segmentation"
+      },
+      {
+        id: "ios-popup-bsod",
+        code: "03",
+        title: "iOS Popup • BSOD",
+        category: "specialized",
+        basePrice: 400,
+        feeType: "cloaking_fee",
+        cloakingFeeStatus: "TBD_CONTACT_FOR_QUOTE",
+        shortDesc: "Safe-page URLs, trust signals & traffic quality troubleshooting"
+      },
+      {
+        id: "crypto-calls",
+        code: "04",
+        title: "Crypto Calls",
+        category: "call-verticals",
+        basePrice: 300,
+        feeType: "ppc_fee",
+        requiresServiceId: "basic-advanced-ppc",
+        shortDesc: "Crypto vertical keyword intent, policy awareness & call routing"
+      },
+      {
+        id: "banking-calls",
+        code: "05",
+        title: "Banking Calls",
+        category: "call-verticals",
+        basePrice: 300,
+        feeType: "ppc_fee",
+        requiresServiceId: "basic-advanced-ppc",
+        shortDesc: "Financial call clustering, geo-targeting & lead validation"
+      },
+      {
+        id: "msoffice-amazon-uber",
+        code: "06",
+        title: "MS Office • Amazon • Uber",
+        category: "call-verticals",
+        basePrice: 300,
+        feeType: "ppc_fee",
+        requiresServiceId: "basic-advanced-ppc",
+        shortDesc: "Brand intent mapping, ad split-testing & tracking"
+      },
+      {
+        id: "printer-antivirus",
+        code: "07",
+        title: "Printer • Antivirus",
+        category: "call-verticals",
+        basePrice: 300,
+        feeType: "ppc_fee",
+        requiresServiceId: "basic-advanced-ppc",
+        subBrands: ["HP", "Canon", "Epson", "Norton", "McAfee"],
+        shortDesc: "Tech-support call cluster architecture & optimization"
+      },
+      {
+        id: "loan-insurance-calls",
+        code: "08",
+        title: "Loan • Insurance Calls",
+        category: "call-verticals",
+        basePrice: 300,
+        feeType: "ppc_fee",
+        requiresServiceId: "basic-advanced-ppc",
+        shortDesc: "Payday/insurance high-intent segmentation & call setup"
+      },
+      {
+        id: "tv-activation",
+        code: "09",
+        title: "TV Activation",
+        category: "call-verticals",
+        basePrice: 300,
+        feeType: "ppc_fee",
+        requiresServiceId: "basic-advanced-ppc",
+        subBrands: ["YouTube", "Roku", "Paramount", "Peacock"],
+        shortDesc: "Streaming activation campaign alignment & performance review"
+      },
+      {
+        id: "cloaking-technical-routing",
+        code: "10",
+        title: "Cloaking / Technical Routing",
+        category: "technical",
+        basePrice: 300,
+        feeType: "none",
+        shortDesc: "Multi-language server routing, security IP filtering & URL rules"
+      }
+    ];
+
+    // Selected state set
+    const state = {
+      selectedIds: new Set(),
+      directSelectedFoundation: false
+    };
+
+    // DOM Elements
+    const cartItemsList = document.getElementById('cart-items-list');
+    const cartEmptyState = document.getElementById('cart-empty-state');
+    const selectedCountBadge = document.getElementById('selected-count-badge');
+    const summarySubtotal = document.getElementById('summary-subtotal');
+    const summaryTotal = document.getElementById('summary-total');
+    const summaryDependencyRow = document.getElementById('summary-dependency-row');
+    const cartCloakingAlert = document.getElementById('cart-cloaking-alert');
+    const badgeDependencyInfo = document.getElementById('badge-dependency-info');
+    const btnWhatsappCheckout = document.getElementById('btn-whatsapp-checkout');
+    const foundationCard = document.getElementById('card-basic-advanced-ppc');
+
+    // Helper to get selected dependents of Service 01
+    function getSelectedPpcDependents() {
+      return CATALOG.filter(item => item.feeType === 'ppc_fee' && state.selectedIds.has(item.id));
+    }
+
+    // Toggle service selection
+    function toggleService(serviceId) {
+      const service = CATALOG.find(s => s.id === serviceId);
+      if (!service) return;
+
+      const ppcDependents = getSelectedPpcDependents();
+
+      // Case: User clicks directly on Foundation (01)
+      if (service.isFoundation) {
+        if (state.selectedIds.has(serviceId)) {
+          // If locked by active dependents, prevent removal directly
+          if (ppcDependents.length > 0) {
+            alert(`Module 01 (Basic → Advanced PPC) is required by your selected vertical modules: ${ppcDependents.map(d => d.title).join(', ')}. Please deselect the dependent modules first.`);
+            return;
+          }
+          state.selectedIds.delete(serviceId);
+          state.directSelectedFoundation = false;
+        } else {
+          state.selectedIds.add(serviceId);
+          state.directSelectedFoundation = true;
+        }
+      } else {
+        // Any other module
+        if (state.selectedIds.has(serviceId)) {
+          state.selectedIds.delete(serviceId);
+          // If no more PPC fee modules exist and user hadn't explicitly chosen foundation, release foundation
+          const remainingDependents = getSelectedPpcDependents();
+          if (remainingDependents.length === 0 && !state.directSelectedFoundation) {
+            state.selectedIds.delete("basic-advanced-ppc");
+          }
+        } else {
+          state.selectedIds.add(serviceId);
+          // If it requires PPC Fee, auto-add Service 01
+          if (service.feeType === 'ppc_fee') {
+            state.selectedIds.add("basic-advanced-ppc");
+          }
+        }
+      }
+
+      render();
+    }
+
+    // Remove single service from cart
+    function removeService(serviceId) {
+      toggleService(serviceId);
+    }
+
+    // Render entire UI state
+    function render() {
+      const ppcDependents = getSelectedPpcDependents();
+      const isFoundationAutoLocked = ppcDependents.length > 0;
+
+      // Update Card Visuals
+      CATALOG.forEach(service => {
+        const card = document.getElementById(`card-${service.id}`);
+        if (!card) return;
+
+        const isSelected = state.selectedIds.has(service.id);
+        const checkIcon = card.querySelector('.check-icon');
+
+        if (isSelected) {
+          card.classList.add('selected');
+          if (checkIcon) checkIcon.classList.remove('hidden');
+        } else {
+          card.classList.remove('selected');
+          if (checkIcon) checkIcon.classList.add('hidden');
+        }
+
+        // Handle Foundation lock state
+        if (service.isFoundation) {
+          if (isFoundationAutoLocked) {
+            card.classList.add('locked');
+            if (badgeDependencyInfo) {
+              badgeDependencyInfo.classList.remove('hidden');
+              badgeDependencyInfo.textContent = `Required by: ${ppcDependents.map(d => d.code).join(', ')}`;
+            }
+          } else {
+            card.classList.remove('locked');
+            if (badgeDependencyInfo) badgeDependencyInfo.classList.add('hidden');
+          }
+        }
+      });
+
+      // Calculate Totals
+      let totalInvestment = 0;
+      let hasCloakingModule = false;
+      const selectedModules = [];
+
+      CATALOG.forEach(service => {
+        if (state.selectedIds.has(service.id)) {
+          selectedModules.push(service);
+          totalInvestment += service.basePrice;
+          if (service.feeType === 'cloaking_fee') {
+            hasCloakingModule = true;
+          }
+        }
+      });
+
+      // Update Counts
+      selectedCountBadge.textContent = `${selectedModules.length} Module${selectedModules.length === 1 ? '' : 's'}`;
+      summarySubtotal.textContent = `$${totalInvestment}`;
+      summaryTotal.textContent = `$${totalInvestment}${hasCloakingModule ? ' + Quote' : ''}`;
+
+      // Show/hide cloaking alert
+      if (hasCloakingModule) {
+        cartCloakingAlert.classList.remove('hidden');
+      } else {
+        cartCloakingAlert.classList.add('hidden');
+      }
+
+      // Render Cart Items
+      if (selectedModules.length === 0) {
+        cartItemsList.innerHTML = `
+          <div id="cart-empty-state" class="text-center py-6 text-slate-500 text-xs">
+            <svg class="w-8 h-8 mx-auto mb-2 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            No modules selected yet.<br>Click any card to add it to your syllabus.
+          </div>
+        `;
+      } else {
+        cartItemsList.innerHTML = selectedModules.map(item => {
+          const isAutoLockedFoundation = item.isFoundation && isFoundationAutoLocked;
+          return `
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-xs text-slate-200 group">
+              <div class="flex items-center gap-2 overflow-hidden">
+                <span class="font-black text-blue-400 text-[10px] bg-blue-950 px-1.5 py-0.5 rounded border border-blue-500/30 flex-shrink-0">
+                  ${item.code}
+                </span>
+                <div class="truncate">
+                  <div class="font-bold text-white truncate">${item.title}</div>
+                  ${isAutoLockedFoundation 
+                    ? `<span class="text-[9px] text-orange-400 block truncate">Auto-included by vertical</span>` 
+                    : ''}
+                </div>
+              </div>
+              <div class="flex items-center gap-2.5 flex-shrink-0">
+                <span class="font-black text-white">$${item.basePrice}</span>
+                ${isAutoLockedFoundation 
+                  ? `<span class="text-slate-600 text-xs cursor-not-allowed" title="Required by selected verticals">🔒</span>` 
+                  : `<button onclick="removeService('${item.id}')" class="text-slate-400 hover:text-red-400 p-1 transition-colors" title="Remove module">✕</button>`}
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // Format WhatsApp Message
+      if (selectedModules.length === 0) {
+        btnWhatsappCheckout.href = `https://wa.me/918950385026?text=${encodeURIComponent("Hello Jordan, I am interested in Tech Flow training programs.")}`;
+      } else {
+        const moduleListText = selectedModules.map(m => `• Module ${m.code}: ${m.title} ($${m.basePrice})`).join('\n');
+        const message = `Hello Jordan (TechFlow),\n\nI would like to enroll in the following customized training program:\n\n${moduleListText}\n\nTotal Investment: $${totalInvestment}${hasCloakingModule ? ' (+ Cloaking Fee Quote)' : ''}\n\nPlease let me know the upcoming onboarding schedule.`;
+        btnWhatsappCheckout.href = `https://wa.me/918950385026?text=${encodeURIComponent(message)}`;
+      }
+    }
+
+    // Attach click listeners to cards
+    CATALOG.forEach(service => {
+      const card = document.getElementById(`card-${service.id}`);
+      if (card) {
+        card.addEventListener('click', () => toggleService(service.id));
+      }
+    });
+
+
+    // Reset Selection Button
+    document.getElementById('btn-reset').addEventListener('click', () => {
+      state.selectedIds.clear();
+      state.directSelectedFoundation = false;
+      render();
+    });
+
+    // Select All Button
+    document.getElementById('btn-select-all').addEventListener('click', () => {
+      CATALOG.forEach(s => state.selectedIds.add(s.id));
+      state.directSelectedFoundation = true;
+      render();
+    });
+
+    // Category Filter Tabs
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        const groups = document.querySelectorAll('[data-category-group]');
+
+        groups.forEach(group => {
+          if (filter === 'all' || group.dataset.categoryGroup === filter) {
+            group.classList.remove('hidden');
+          } else {
+            group.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const openIcon = document.getElementById('menu-open-icon');
+    const closeIcon = document.getElementById('menu-close-icon');
+
+    mobileBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        openIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+        openIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    });
+
+    // Initialize Default View
+    render();
+  </script>
+</body>
+</html>
